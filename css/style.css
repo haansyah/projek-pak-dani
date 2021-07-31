@@ -326,7 +326,7 @@ section.right {
 .right .danger-data p {
   color: white;
   font-weight: 800;
-  font-size: 20;
+  font-size: 20px;
   text-align: center;
   border: 3px dashed white;
   padding: 18px 15px;

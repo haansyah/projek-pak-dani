@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
 
 * {
   padding: 0;
@@ -21,6 +22,10 @@ body {
   --accentBlue: #2a7cbc;
   --accentGreen: #43b97d;
   --accentPink: #ed2790;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
@@ -94,12 +99,24 @@ a {
   padding-bottom: 16px;
   color: var(--accentGray02);
   font-weight: bold;
+  position: relative;
 }
 
 .content nav a:first-child {
   margin-right: 26px;
   color: black;
-  border-bottom: 4px solid var(--accentOrange);
+}
+
+.content nav a:first-child:before {
+  content: "";
+  position: absolute;
+  width: calc(100% / 2);
+  z-index: 2;
+  bottom: -2px;
+  height: 4px;
+  background-color: var(--accentOrange);
+  border-radius: 2px;
+  margin: 0 calc(100% / 4);
 }
 
 .list-container {
@@ -154,6 +171,24 @@ a {
   background-repeat: no-repeat;
 }
 
+.list-lomba.active {
+  position: relative;
+  border: 5px solid var(--accentGray01);
+  border-radius: 20px;
+}
+
+.list-lomba.borders:before {
+  content: " ";
+  position: absolute;
+  z-index: 2;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 5px solid var(--accentPurple2);
+  border-radius: 20px;
+}
+
 .content h2 {
   text-align: center;
   color: var(--accentRed);
@@ -202,6 +237,7 @@ section.right {
 .right .justify-between p {
   font-size: 14px;
   font-weight: 300;
+  font-style: italic;
   font-family: "Lato", sans-serif;
   color: var(--accentGray02);
 }
@@ -230,7 +266,7 @@ section.right {
 }
 
 .right .user h1 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 22px;
   color: black;
   margin-bottom: 2px;
@@ -245,6 +281,8 @@ section.right {
 .right .user p {
   font-weight: 300;
   font-size: 12px;
+  font-family: "Lato", sans-serif;
+  color: var(--accentGray02);
 }
 
 .right .data {
@@ -263,6 +301,7 @@ section.right {
 .right .data button.button-1 {
   color: var(--accentPurple);
   background-color: var(--accentOrange);
+  width: calc(100% - 110px);
 }
 
 .right .data button.button-2 {
@@ -271,9 +310,9 @@ section.right {
 }
 
 .right .lengkapi-data {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--accentRed);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 13px;
 }
 
@@ -295,6 +334,9 @@ section.right {
 
 .right .kontak {
   margin-top: 40px;
+  position: absolute;
+  bottom: 37px;
+  padding-left: 37px;
 }
 
 .right .kontak h1 {
